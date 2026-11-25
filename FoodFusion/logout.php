@@ -1,0 +1,1 @@
+<?php require_once 'config/config.php';if(user())activity((int)user()['id'],'logout','Logged out');$_SESSION=[];session_destroy();header('Location:index.php');exit;

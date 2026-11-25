@@ -1,0 +1,9 @@
+<?php require __DIR__.'/join_modal.php';?>
+<footer class="footer mt-5"><div class="container py-5"><div class="row g-4">
+<div class="col-md-4"><h4><i class="bi bi-egg-fried"></i> FoodFusion</h4><p>Cook, create and share. A home for curious cooks and food lovers.</p></div>
+<div class="col-md-2"><h6>Explore</h6><a href="<?=$base?>pages/recipes.php">Recipes</a><a href="<?=$base?>pages/community.php">Community</a><a href="<?=$base?>pages/resources.php">Resources</a></div>
+<div class="col-md-3"><h6>Legal</h6><a href="<?=$base?>pages/privacy.php">Privacy Policy</a><a href="<?=$base?>pages/cookies.php">Cookie Policy</a><a href="<?=$base?>pages/terms.php">Terms</a></div>
+<div class="col-md-3"><h6>Follow</h6><div class="socials"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="bi bi-tiktok"></i></a></div></div>
+</div><hr><small>&copy; <?=date('Y')?> FoodFusion. All rights reserved.</small></div></footer>
+<div id="cookieBanner" class="cookie-banner" hidden><div><strong>Cookies</strong><br><small>We use a browser preference to remember consent and support the site.</small></div><div><button id="acceptCookies" class="btn btn-primary btn-sm">Accept</button><button id="declineCookies" class="btn btn-outline-light btn-sm">Decline</button><a href="<?=$base?>pages/cookies.php">Policy</a></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="<?=$base?>assets/js/app.js"></script></body></html>

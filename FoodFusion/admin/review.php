@@ -1,0 +1,1 @@
+<?php require_once '../config/config.php';require_admin();verify_csrf();$id=(int)$_POST['id'];$st=$_POST['status'];if(in_array($st,['approved','rejected'],true))db()->prepare("UPDATE recipes SET status=? WHERE id=?")->execute([$st,$id]);flash('success','Submission updated.');header('Location:index.php');exit;
