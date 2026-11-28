@@ -14,3 +14,4 @@ function flash(string $type,string $msg):void{$_SESSION['flash']=['type'=>$type,
 function get_flash():?array{$x=$_SESSION['flash']??null;unset($_SESSION['flash']);return $x;}
 function activity(int $id,string $type,string $desc=''):void{try{$s=db()->prepare("INSERT INTO user_activity(user_id,activity_type,description,ip_address) VALUES(?,?,?,?)");$s->execute([$id,$type,$desc,$_SERVER['REMOTE_ADDR']??'']);}catch(Throwable $e){}}
 function recipe_image(?string $p):string{return $p?e($p):base_path().'assets/images/recipe-placeholder.svg';}
+function youtube_id(?string $url):?string{if(!$url)return null;if(preg_match('~(?:youtu\.be/|v=|embed/|shorts/|live/)([A-Za-z0-9_-]{11})~',$url,$m))return $m[1];if(preg_match('/^[A-Za-z0-9_-]{11}$/',$url))return $url;return null;}
